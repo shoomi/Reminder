@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="@drawable/orange_background">
+
+    <TextView
+            android:id="@+id/tvRemindTimeSetInfo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#680505"
+            android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" android:textStyle="bold"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextRemindFieldEnter" android:layout_gravity="center_horizontal"
+            android:background="#fdfdd5"
+            android:layout_below="@+id/textViewTitle" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="set reminder"
+            android:id="@+id/btnSetReminder"
+            android:onClick="setTheReminder"
+            android:textSize="9dp"
+            android:backgroundTint="#805a3b"
+            android:layout_marginTop="39dp" android:layout_below="@+id/btnSetDate"
+            android:layout_centerHorizontal="true"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cancel"
+            android:id="@+id/btnCancelReminder"
+            android:onClick="cancelReminder"
+            android:textSize="9dp"
+            android:backgroundTint="#805a3b"
+            android:layout_below="@+id/btnSetReminder" android:layout_centerHorizontal="true"
+            android:textColor="#090909"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="set time"
+            android:id="@+id/btnSetTime"
+            android:onClick="setTime"
+            android:textSize="10dp"
+            android:backgroundTint="#4c3f42"
+            android:textColor="#f9f5f5" android:layout_below="@+id/textView" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="set date"
+            android:id="@+id/btnSetDate"
+            android:onClick="setDate"
+            android:textSize="10dp"
+            android:backgroundTint="#4c3f42"
+            android:layout_below="@+id/textView" android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" android:layout_toRightOf="@+id/btnSetReminder"
+            android:layout_toEndOf="@+id/btnSetReminder" android:textColor="#f9f5f5"/>
+    <TextView android:id="@+id/textView" android:layout_width="fill_parent" android:layout_height="wrap_content"
+              android:textColor="#000000"
+              android:layout_below="@+id/editTextRemindFieldEnter" android:layout_alignParentRight="true"
+              android:layout_alignParentEnd="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textViewTimeLeftToRemind" android:layout_above="@+id/tvRemindTimeSetInfo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="90dp" android:textColor="#980606"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Write below your reminder"
+            android:id="@+id/textViewTitle"
+            android:textColor="#800505" android:layout_alignParentTop="true" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="time left:"
+            android:id="@+id/textView3"
+            android:textColor="#0b0b0b"
+            android:textSize="15dp" android:layout_alignBottom="@+id/textViewTimeLeftToRemind"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="open list"
+            android:id="@+id/btnOpenListOfReminders" android:onClick="onClick" android:textSize="9dp"
+            android:backgroundTint="#805a3b"
+            android:textColor="#f7f0f0"
+            android:layout_above="@+id/tvRemindTimeSetInfo" android:layout_alignLeft="@+id/btnCancelReminder"
+            android:layout_alignStart="@+id/btnCancelReminder"/>
+
+</RelativeLayout>
