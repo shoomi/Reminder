@@ -14,7 +14,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String KEY_ID = "_id";
     public static final String KEY_TEXT = "reminder";
     public static final String KEY_TIME = "time";
-    public static final String KEY_STATUS = "status";
+//    public static final String KEY_STATUS = "status";
 
 
     public DBHelper(Context context) {
@@ -23,7 +23,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(String.format("create table '%s' ('%s' integer primary key, '%s' varchar(100), '%s'  varchar(20), '%s' varchar(10))", TABLE_CONTACTS, KEY_ID, KEY_TEXT, KEY_TIME, KEY_STATUS));
+        db.execSQL(String.format("create table '%s' ('%s' integer primary key, '%s' varchar(100), '%s'  varchar(20))", TABLE_CONTACTS, KEY_ID, KEY_TEXT, KEY_TIME));
     }
 
     @Override

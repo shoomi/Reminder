@@ -23,7 +23,7 @@
         </activity>
 
         <service
-                android:name=".alarmutils.AlarmService"
+                android:name=".alarmutils.NotificationService"
                 android:enabled="true"/>
 
         <receiver android:name=".alarmutils.AlarmReceiver"/>

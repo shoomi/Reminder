@@ -12,11 +12,11 @@ import com.example.andriy.reminder.activities.ReminderActivity;
 
 import static com.example.andriy.reminder.activities.ReminderActivity.reminderId;
 
-public class AlarmService extends IntentService {
+public class NotificationService extends IntentService {
 
 
-    public AlarmService() {
-        super("AlarmService");
+    public NotificationService() {
+        super("NotificationService");
     }
 
     @Override
@@ -39,10 +39,10 @@ public class AlarmService extends IntentService {
                 this)
                 .setContentTitle(msg).setSmallIcon(R.drawable.ic_launcher)
                 .setStyle(new NotificationCompat.BigTextStyle().bigText(msg))
-                .setSmallIcon(R.drawable.ic_launcher)
-                .setContentText(msg);
+                .setSmallIcon(R.drawable.ic_launcher);
+//                .setContentText(msg);
         alarmNotificationBuilder.setContentIntent(contentIntent);
-        alarmNotificationManager.notify(1, alarmNotificationBuilder.build());
+        alarmNotificationManager.notify((int) reminderId, alarmNotificationBuilder.build());
     }
 
 

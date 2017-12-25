@@ -61,7 +61,7 @@ public class DbOperations extends AppCompatActivity {
         Cursor c = null;
         String remindersText = null;
 
-        c = db.query(TABLE_CONTACTS, new String[]{KEY_ID, KEY_TEXT, KEY_STATUS, KEY_TIME}, KEY_ID + "=?", new String[]{String.valueOf(intent.getIntExtra("alarmId", (int) reminderId))}, null, null, null, null);
+        c = db.query(TABLE_CONTACTS, new String[]{KEY_ID, KEY_TEXT, KEY_TIME}, KEY_ID + "=?", new String[]{String.valueOf(intent.getIntExtra("alarmId", (int) reminderId))}, null, null, null, null);
 
         if (c != null && c.moveToFirst()) {
             do {
