@@ -92,7 +92,7 @@
             android:id="@+id/btnOpenListOfReminders" android:onClick="onClick" android:textSize="9dp"
             android:backgroundTint="#805a3b"
             android:textColor="#f7f0f0"
-            android:layout_above="@+id/tvRemindTimeSetInfo" android:layout_alignLeft="@+id/btnCancelReminder"
-            android:layout_alignStart="@+id/btnCancelReminder"/>
+            android:layout_below="@+id/textView3" android:layout_alignLeft="@+id/btnCancelReminder"
+            android:layout_alignStart="@+id/btnCancelReminder" android:layout_marginTop="21dp"/>
 
 </RelativeLayout>

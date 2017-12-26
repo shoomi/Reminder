@@ -14,6 +14,7 @@ import static com.example.andriy.reminder.activities.ReminderActivity.reminderId
 
 public class NotificationService extends IntentService {
 
+    private static int notificationId;
 
     public NotificationService() {
         super("NotificationService");
@@ -39,10 +40,11 @@ public class NotificationService extends IntentService {
                 this)
                 .setContentTitle(msg).setSmallIcon(R.drawable.ic_launcher)
                 .setStyle(new NotificationCompat.BigTextStyle().bigText(msg))
-                .setSmallIcon(R.drawable.ic_launcher);
-//                .setContentText(msg);
+//                .setSmallIcon(R.drawable.ic_launcher)
+                .setContentText(msg);
         alarmNotificationBuilder.setContentIntent(contentIntent);
-        alarmNotificationManager.notify((int) reminderId, alarmNotificationBuilder.build());
+        notificationId += 1;
+        alarmNotificationManager.notify(notificationId, alarmNotificationBuilder.build());
     }
 
 
