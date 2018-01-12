@@ -1,4 +1,4 @@
-# Reminder
+## Reminder
 This is a simple Android reminder. 
 
 ### Screenshots
